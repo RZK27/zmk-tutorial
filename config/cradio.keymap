@@ -106,7 +106,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  ~       │  `       │  /       │  *       │          │   │          │  [       │  ]       │  <       │  >       │
-            &kp TILDE  &kp GRAVE  &kp FSLH   &kp ASTRK  &trans         &trans     &kp LBKT   &kp RBKT   &kp lt     &kp gt 
+            &kp TILDE  &kp GRAVE  &kp FSLH   &kp ASTRK  &trans         &trans     &kp LBKT   &kp RBKT   &kp LT     &kp GT 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  @       │  #       │  -       │  +       │          │   │          │  (       │  )       │  {       │  }       │
             &kp AT     &kp HASH   &kp MINUS  &kp PLUS   &trans         &trans     &kp LPAR   &kp RPAR   &kp LBRC   &kp RBRC

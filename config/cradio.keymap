@@ -80,7 +80,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , ?      │ . !      │ ' "      │ 
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &sft_c     &sft_d     &kp QUOT 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC  // SFT + BSPC = DEL
+                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 &bs_del  // SFT + BSPC = DEL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };

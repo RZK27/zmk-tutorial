@@ -6,8 +6,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &lh_pht LSHFT k1  &lh_pht LALT k2  &lh_pht LCTRL k3  &lh_pht LGUI k4
-#define HRMR(k1,k2,k3,k4) &rh_pht RGUI k1  &rh_pht RCTRL k2  &rh_pht RALT k3  &rh_pht RSHFT k4
+#define HRML(k1,k2,k3,k4) &lh_pht LGUI k1  &lh_pht LALT k2  &lh_pht LSHFT k3  &lh_pht LCTRL k4
+#define HRMR(k1,k2,k3,k4) &rh_pht RCTRL k1  &rh_pht RSHFT k2  &rh_pht RALT k3  &rh_pht RGUI k4
 
 / {
     behaviors {
@@ -136,8 +136,8 @@
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
            &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &kp F1     &kp F2     &kp F3     &kp F4    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ SHIFT    │ ALT      │ CTRL     │ GUI      │PROFILE 1 │   │          │          │          │          │          │
-           &kp LSHFT  &kp LALT   &kp LCTRL  &kp LGUI   &bt BT_SEL 1    &kp F5     &kp F6     &kp F7     &kp F8     &tog 4
+        //│ GUI      │ ALT      │ SHIFT    │ CTRL     │PROFILE 1 │   │          │          │          │          │          │
+           &kp LGUI   &kp LALT   &kp LSHFT  &kp LCTRL  &bt BT_SEL 1    &kp F5     &kp F6     &kp F7     &kp F8     &tog 4
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │BOOTLOADER│
           &bootloader  &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &kp F9     &kp F10    &kp F11    &kp F12   &bootloader

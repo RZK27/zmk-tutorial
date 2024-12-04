@@ -100,7 +100,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ PAGE UP  │  7       │  8       │  9       │          │   │          │ VOL DN   │ VOL UP   │ BRT DN   │ BRT UP   │
-            &kp PG_UP  &kp N7     &kp N8     &kp N9     &trans       &trans &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP
+            &kp PG_UP  &kp N7     &kp N8     &kp N9     &trans       &kp ESC &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 0        │  4       │  5       │  6       │          │   │          │ LEFT     │ DOWN     │ UP       │ RIGHT    │
             HRML(N0,       N4,         N5,        N6)   &trans         &trans     &kp LARW   &kp DARW   &kp UARW   &kp RARW   
@@ -157,9 +157,9 @@
             &kp LSHFT  &kp A      &kp W      &kp D      &kp F          &kp Z      &kp LARW   &kp UARW   &kp RARW   &kp N3
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CTRL     │ R        │ S        │ X        │ M        │   │          │          │ DOWN     │          │          │
-            &kp LCTRL  &kp R      &kp S      &kp X      &kp M          &kp N4     &kp N5     &kp DARW   &kp N6     &kp N7
+            &kp LCTRL  &kp R      &kp S      &kp X      &kp M          &kp N5     &kp N6     &kp DARW   &kp N7     &kp N8
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp N4    &kp SPACE       &kp N8     &kp N9
+                                             &kp N4    &kp SPACE       &kp N9     &kp N0
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };

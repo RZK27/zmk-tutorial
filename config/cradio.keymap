@@ -133,11 +133,11 @@
         tri_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &kp F1     &kp F2     &kp F3     &kp F4    &sys_reset
+        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │          │
+           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &kp F1     &kp F2     &kp F3     &kp F4     &tog 4
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ GUI      │ ALT      │ SHIFT    │ CTRL     │PROFILE 1 │   │          │          │          │          │          │
-           &kp LGUI   &kp LALT   &kp LSHFT  &kp LCTRL  &bt BT_SEL 1    &kp F5     &kp F6     &kp F7     &kp F8     &tog 4
+        //│ GUI      │ ALT      │ SHIFT    │ CTRL     │PROFILE 1 │   │          │          │          │          │ RESET    │
+           &kp LGUI   &kp LALT   &kp LSHFT  &kp LCTRL  &bt BT_SEL 1    &kp F5     &kp F6     &kp F7     &kp F8     &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │BOOTLOADER│
           &bootloader  &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &kp F9     &kp F10    &kp F11    &kp F12   &bootloader

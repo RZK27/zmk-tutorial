@@ -6,32 +6,39 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &lh_pht LGUI k1  &lh_pht LALT k2  &lh_pht LSHFT k3  &lh_pht LCTRL k4
-#define HRMR(k1,k2,k3,k4) &rh_pht RCTRL k1  &rh_pht RSHFT k2  &rh_pht RALT k3  &rh_pht RGUI k4
+#define HRML(k1,k2,k3,k4) &tap_mod LGUI k1  &tap_mod LALT k2  &tap_mod LSHFT k3  &tap_mod LCTRL k4
+#define HRMR(k1,k2,k3,k4) &tap_mod RCTRL k1  &c_tap_mod RSHFT k2  &d_tap_mod RALT k3  &tap_mod RGUI k4
 
 #define RIGHT_HAND_KEYS <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 32 33>
 #define LEFT_HAND_KEYS <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31>
 
 / {
     behaviors {
-        lh_pht: left_positional_hold_tap {
+        tap_mod: regular_tap_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <200>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = RIGHT_HAND_KEYS;
         };
 
-        rh_pht: right_positional_hold_tap {
+        c_tap_mod: comma_tap_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = LEFT_HAND_KEYS;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&sft_c>;
+        };
+
+        d_tap_mod: dot_tap_mod {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&sft_d>;
         };
 
         sft_c: shift_comma {
@@ -87,10 +94,10 @@
             &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │ O        │
-            HRML(A,        R,         S,         T)     &kp G          &kp M      HRMR(N,        E,         I,        O)
+            &kp A      &kp R      &kp S      &kp T     &kp G          &kp M      &kp N      &kp E      &kp I      &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , ?      │ . !      │ ' "      │ 
-            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &sft_c     &sft_d     &kp QUOT 
+        //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , ?      │ . !      │ '' ""    │ 
+             HRML(Z,        X,         C,         D)    &kp V          &kp K      HRMR(H,        0,         0,        QUOT) 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &lt 2 TAB   &kp ENTER     &kp SPACE  &lt_bspc 1 0  // SFT + BSPC = DEL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯

@@ -17,7 +17,7 @@
         tap_mod: regular_tap_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
@@ -26,7 +26,7 @@
         c_tap_mod: comma_tap_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             bindings = <&kp>, <&sft_c>;
@@ -35,7 +35,7 @@
         d_tap_mod: dot_tap_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             bindings = <&kp>, <&sft_d>;
@@ -111,10 +111,10 @@
             &kp ESC    &kp N7     &kp N8     &kp N9     &trans       &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 0        │  4       │  5       │  6       │          │   │ PAGE UP  │ LEFT     │ DOWN     │ UP       │ RIGHT    │
-            HRML(N0,       N4,         N5,        N6)   &trans         &kp PG_UP  &kp LARW   &kp DARW   &kp UARW   &kp RARW   
+            &kp N0     &kp N4      &kp N5    &kp N6     &trans         &kp PG_UP  &kp LARW   &kp DARW   &kp UARW   &kp RARW   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS LOCK│  1       │  2       │  3       │          │   │ PAGE DN  │PLAY PAUSE│ HOME     │ END      │ INSERT   │
-            &kp CAPS   &kp N1     &kp N2     &kp N3     &trans         &kp PG_DN  &kp C_PP   &kp HOME   &kp END    &kp INS
+            HRML(CAPS,      N1,        N2,       N3)    &trans         &kp PG_DN  &kp C_PP   &kp HOME   &kp END    &kp INS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯

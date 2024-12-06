@@ -21,6 +21,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
+            quick-tap-ms = <200>;
         };
 
         c_tap_mod: comma_tap_mod {
@@ -30,6 +31,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             bindings = <&kp>, <&sft_c>;
+            quick-tap-ms = <200>;
         };
 
         d_tap_mod: dot_tap_mod {
@@ -39,6 +41,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             bindings = <&kp>, <&sft_d>;
+            quick-tap-ms = <200>;
         };
 
         sft_c: shift_comma {
